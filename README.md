@@ -4,7 +4,7 @@ A fun and interactive simulation of shaking a cup of Skittles! In this project, 
 
 ## 💡Features
 
-- Randomly shake 60 Skittles to see their heads and tails.
+- Randomly shake 64 Skittles to see their heads and tails.
 - Skittles change to vibrant colors (e.g., red, yellow, green) when they land as heads or tails.
 - Subtle shake animation
 - Reset the simulation anytime with a simple click of the 'Start Over' button.
@@ -12,7 +12,7 @@ A fun and interactive simulation of shaking a cup of Skittles! In this project, 
 
 ## 🕹️ Try It Out
 
-You can try the Skittles Shake Simulation directly in your browser by visiting [here](https://chippokiddo.github.io/skittlesshaker/).
+You can try the Skittles Shake Simulation directly in your browser by visiting **[here](https://chippokiddo.github.io/skittlesshaker/)**.
 
 ## 🤝 Contributing
 
