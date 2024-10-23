@@ -33,11 +33,21 @@
       <span class="slider"></span>
     </label>
 
-    <button onclick="shakeSkittles()">Shake the Skittles</button>
-    <button id="start-over" onclick="startOver()">Start Over</button>
+    <!-- Counters section -->
+    <div class="counters">
+      <p>Heads (s): <span id="heads-count">0</span></p>
+      <p>Tails (no s): <span id="tails-count">0</span></p>
+    </div>
+
+    <!-- Skittles container -->
     <div id="skittles-container"></div>
-    <p>Heads (s): <span id="heads-count">0</span></p>
-    <p>Tails (no s): <span id="tails-count">0</span></p>
+
+    <!-- Buttons section -->
+    <div class="buttons">
+      <button onclick="shakeSkittles()">Shake Skittles</button>
+      <button id="start-over" onclick="startOver()">Start Over</button>
+    </div>
+
     <script src="./script.js"></script>
   </body>
 </html>
