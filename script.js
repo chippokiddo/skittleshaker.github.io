@@ -2,6 +2,8 @@ let skittles = Array(60).fill(null); // Skittles start as null, meaning they hav
 const skittlesContainer = document.getElementById('skittles-container');
 const headsCountElem = document.getElementById('heads-count');
 const tailsCountElem = document.getElementById('tails-count');
+const darkModeToggle = document.getElementById('dark-mode-toggle');
+const startOverButton = document.getElementById('start-over');
 
 // List of hex codes for different Skittle colors
 const skittleColors = ["#e60000", "#ff9900", "#ffff00", "#00ff00", "#660066"];
@@ -37,6 +39,10 @@ function shakeSkittles() {
     // Add shake animation class to the container
     skittlesContainer.classList.add('shake');
 
+    // Enable the "Start Over" button again because Skittles have now been changed
+    startOverButton.disabled = false;
+    startOverButton.classList.remove('disabled');
+
     // Remove the shake class after the animation completes
     setTimeout(() => {
         skittlesContainer.classList.remove('shake');
@@ -62,9 +68,20 @@ function performShake() {
 }
 
 function startOver() {
-    skittles = Array(60).fill(null); // Reset the skittles to their initial state.
-    createSkittles(); // Recreate the skittles display.
-    updateCounts(); // Reset the counters to zero.
+    // Check if all skittles are already in their initial state
+    const isAllGray = skittles.every(state => state === null);
+    if (isAllGray) {
+        return; // Do nothing if they are already reset
+    }
+
+    // Reset the skittles to their initial state.
+    skittles = Array(60).fill(null);
+    createSkittles();
+    updateCounts();
+
+    // Disable the 'Start Over' button after resetting
+    startOverButton.disabled = true;
+    startOverButton.classList.add('disabled');
 }
 
 function updateCounts() {
@@ -74,4 +91,24 @@ function updateCounts() {
     tailsCountElem.textContent = tailsCount;
 }
 
+// Disable the 'Start Over' button initially since Skittles start in their initial state
+startOverButton.disabled = true;
+startOverButton.classList.add('disabled');
+
 createSkittles(); // Initialize Skittles on page load but keep counts at zero.
+
+// Load user's previous theme preference if it exists
+if (localStorage.getItem('dark-mode') === 'enabled') {
+    document.body.classList.add('dark-mode');
+    darkModeToggle.checked = true;
+}
+
+darkModeToggle.addEventListener('change', () => {
+    if (darkModeToggle.checked) {
+        document.body.classList.add('dark-mode');
+        localStorage.setItem('dark-mode', 'enabled');
+    } else {
+        document.body.classList.remove('dark-mode');
+        localStorage.setItem('dark-mode', 'disabled');
+    }
+});
