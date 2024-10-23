@@ -1,6 +1,6 @@
 # Skittles Shaker
 
-A heads-or-tails simulation featuring Skittles! In this project, you can shake virtual Skittles that have two sides: heads (s) and tails (no s). The Skittles start off gray, and when you shake the container, they take on random colors, representing heads or tails. Keep shaking until all the Skittles end up as tails. Try it out and see how many shakes it takes to get all tails!
+A heads-or-tails simulation featuring Skittles. You can shake virtual Skittles that have two sides: heads (s) and tails (no s). The Skittles start off gray, and when you shake the container, they take on random colors, representing heads or tails. Keep shaking until all the Skittles end up as tails.
 
 ## 💡Features
 
