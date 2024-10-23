@@ -15,20 +15,20 @@ h1 {
 
 p {
   font-size: 18px;
-  color: #555;
+  color: #444;
 }
 
 #skittles-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 4px; /* Add a little space between skittles */
-  max-width: 320px; /* Prevent the container from growing too wide */
+  gap: 4px;
+  max-width: 320px;
   margin: 20px auto;
-  background-color: #e0e0e0; /* Slight background to contrast the skittles */
+  background-color: #e0e0e0;
   border-radius: 10px;
   padding: 15px;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
   transition: transform 0.1s ease-in-out;
 }
 
@@ -63,20 +63,20 @@ p {
   align-items: center;
   justify-content: center;
   font-size: 18px;
-  color: white;
-  background-color: gray; /* Default background for initial state */
-  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2); /* Add a slight shadow to each Skittle */
-  transition: background-color 0.3s ease, transform 0.1s ease; /* Smooth transitions */
+  color: #f7f7f7;
+  background-color: gray; 
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2); 
+  transition: background-color 0.3s ease, transform 0.1s ease;
 }
 
 .skittle:hover {
-  transform: scale(1.1); /* Slight zoom on hover */
+  transform: scale(1.1);
 }
 
 button {
   font-family: Arial, sans-serif;
-  background-color: #28a745; /* Green color for Shake Skittles */
-  color: white;
+  background-color: #007bff; /* Button color for Shake Skittles */
+  color: #f7f7f7;
   padding: 10px 20px;
   border: none;
   border-radius: 5px;
@@ -87,11 +87,7 @@ button {
 
 /* Style for the Shake Skittles button */
 button:hover {
-  background-color: #218838;
-}
-
-button:active {
-  background-color: #1e7e34;
+  background-color: #0056b3;
 }
 
 /* Style for the Start Over button */
@@ -101,4 +97,75 @@ button#start-over {
 
 button#start-over:hover {
   background-color: #c82333;
+}
+
+/* Toggle switch styling with icons */
+.switch {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.switch input {
+  display: none;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: 0.4s;
+  border-radius: 34px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: #f7f7f7;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+/* Switch background and icon change when checked */
+input:checked + .slider {
+  background-color: #007bff;
+}
+
+input:checked + .slider:before {
+  transform: translateX(26px);
+}
+
+/* Dark mode */
+body.dark-mode {
+  background: #333;
+  color: #f7f7f7;
+}
+
+body.dark-mode h1 {
+  color: #f7f7f7;
+}
+
+body.dark-mode p {
+  font-size: 18px;
+  color: #f7f7f7;
+}
+
+body.dark-mode #skittles-container {
+  background-color: #303030;
+  box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.1);
+}
+
+body.dark-mode .skittle {
+  box-shadow: 0px 2px 5px rgba(255, 255, 255, 0.2);
 }
