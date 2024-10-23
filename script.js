@@ -1,4 +1,4 @@
-let skittles = Array(60).fill(null); // Skittles start as null, meaning they haven't been flipped yet.
+let skittles = Array(64).fill(null); // Skittles start as null, meaning they haven't been flipped yet.
 const skittlesContainer = document.getElementById('skittles-container');
 const headsCountElem = document.getElementById('heads-count');
 const tailsCountElem = document.getElementById('tails-count');
@@ -75,7 +75,7 @@ function startOver() {
     }
 
     // Reset the skittles to their initial state.
-    skittles = Array(60).fill(null);
+    skittles = Array(64).fill(null);
     createSkittles();
     updateCounts();
 
