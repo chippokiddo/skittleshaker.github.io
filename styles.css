@@ -1,0 +1,138 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f7f7f7;
+  color: #333;
+  text-align: center;
+  margin: 0;
+  padding: 20px;
+}
+
+h1 {
+  color: #444;
+  margin-bottom: 20px;
+}
+
+button {
+  font-family: Arial, sans-serif;
+  background-color: #007bff;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 10px;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+p {
+  font-size: 18px;
+  margin-top: 10px;
+}
+
+#skittles-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 4px; /* Add a little space between skittles */
+  max-width: 320px; /* Prevent the container from growing too wide */
+  margin: 20px auto;
+  background-color: #e0e0e0; /* Slight background to contrast the skittles */
+  border-radius: 10px;
+  padding: 15px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  transition: transform 0.1s ease-in-out;
+}
+
+.shake {
+  animation: shake 0.5s ease-in-out;
+}
+
+@keyframes shake {
+  0% {
+    transform: translate(0, 0);
+  }
+  25% {
+    transform: translate(-5px, 0);
+  }
+  50% {
+    transform: translate(5px, 0);
+  }
+  75% {
+    transform: translate(-5px, 0);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+.skittle {
+  width: 30px;
+  height: 30px;
+  margin: 2px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  color: white;
+  background-color: gray; /* Default background for initial state */
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2); /* Add a slight shadow to each Skittle */
+  transition: background-color 0.3s ease, transform 0.1s ease; /* Smooth transitions */
+}
+
+.skittle:hover {
+  transform: scale(1.1); /* Slight zoom on hover */
+}
+
+button {
+  font-family: Arial, sans-serif;
+  background-color: #28a745; /* Green color for "Shake Skittles" */
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 10px;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #218838; /* Darker green on hover */
+}
+
+button:active {
+  background-color: #1e7e34; /* Even darker when clicked */
+}
+
+/* Style for the Start Over button */
+button#start-over {
+  background-color: #dc3545; /* Red for reset */
+}
+
+button#start-over:hover {
+  background-color: #c82333;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #f0f4f8, #d9e4f5);
+  color: #333;
+  text-align: center;
+  margin: 0;
+  padding: 20px;
+}
+
+h1 {
+  font-size: 24px;
+  color: #444;
+  margin-bottom: 20px;
+}
+
+p {
+  font-size: 18px;
+  color: #555;
+}
