@@ -64,8 +64,8 @@ p {
   justify-content: center;
   font-size: 18px;
   color: #f7f7f7;
-  background-color: gray; 
-  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2); 
+  background-color: gray;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
   transition: background-color 0.3s ease, transform 0.1s ease;
 }
 
@@ -97,6 +97,16 @@ button#start-over {
 
 button#start-over:hover {
   background-color: #c82333;
+}
+
+button:disabled,
+button.disabled {
+  background-color: #ccc; /* Light gray to indicate the button is inactive */
+  cursor: not-allowed; /* Change the cursor to indicate that it can't be clicked */
+}
+
+button.disabled:hover {
+  background-color: #ccc; /* Prevent color change on hover when disabled */
 }
 
 /* Toggle switch styling with icons */
