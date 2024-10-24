@@ -4,25 +4,13 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Skittles Shaker</title>
-    <link rel="stylesheet" href="./styles.css" />
-    <link
-      rel="apple-touch-icon"
-      sizes="180x180"
-      href="./favicon/apple-touch-icon.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="./favicon/favicon-32x32.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="16x16"
-      href="./favicon/favicon-16x16.png"
-    />
+    <link rel="apple-touch-icon" sizes="180x180" href="./favicon/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="./favicon/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="./favicon/favicon-16x16.png" />
     <link rel="manifest" href="./favicon/site.webmanifest" />
+    <link rel="stylesheet" href="./styles.css" />
+    <audio id="shake-sound" src="./audio/shake.mp3" preload="auto"></audio>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
   </head>
   <body>
     <h1>Skittles Shaker</h1>
@@ -37,14 +25,20 @@
     <div class="counters">
       <p>Heads (s): <span id="heads-count">0</span></p>
       <p>Tails (no s): <span id="tails-count">0</span></p>
+      <p>Shakes: <span id="shake-count">0</span></p>
     </div>
 
     <!-- Skittles container -->
     <div id="skittles-container"></div>
 
+    <!-- Progress bar -->
+    <div class="progress-bar">
+      <div class="progress" id="progress"></div>
+    </div>
+
     <!-- Buttons section -->
     <div class="buttons">
-      <button onclick="shakeSkittles()">Shake Skittles</button>
+      <button id="shake-skittles" onclick="shakeSkittles()">Shake Skittles</button>
       <button id="start-over" onclick="startOver()">Start Over</button>
     </div>
 
