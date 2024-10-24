@@ -6,9 +6,14 @@ A heads-or-tails simulation featuring Skittles. You can shake virtual Skittles t
 
 - Randomly shake 64 Skittles to see their heads and tails.
 - Skittles change to vibrant colors (e.g., red, yellow, green) when they land as heads or tails.
-- Subtle shake animation
 - Reset the simulation anytime by clicking the 'Start Over' button.
 - Light/dark mode
+- Shake counter
+- Progress bar
+- Shake sound effect
+- Confetti celebration using (canvas-confetti)[https://github.com/catdad/canvas-confetti] when you reach all tails.
+- Improved shake effect
+- Subtle flip animation
 
 ## 🕹️ Try It Out
 
