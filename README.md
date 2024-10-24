@@ -11,7 +11,7 @@ A heads-or-tails simulation featuring Skittles. You can shake virtual Skittles t
 - Shake counter
 - Progress bar
 - Shake sound effect
-- Confetti celebration using (canvas-confetti)[https://github.com/catdad/canvas-confetti] when you reach all tails.
+- Confetti celebration using [canvas-confetti](https://github.com/catdad/canvas-confetti) when you reach all tails.
 - Improved shake effect
 - Subtle flip animation
 
